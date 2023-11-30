@@ -6,42 +6,94 @@ print(x)
 symbols = "$%^&*#()*%#"
 asc = tuple((ord(sym) for sym in symbols))
 
-print(asc)
+print(type(asc))
 
-import array
-l=array.array("I",(ord(each) for each in symbols))
+name, age, color = ('Swamy',15,"Black")
+k = ('Swamy',15,"Black")
 
-print(l)
+print(type(name))
+print(type(k))
 
-def sum_num(x,*list):
-    return sum(list)
 
-a=sum_num(1,2,3)
-#print(a)
 
-b=sum_num(1,2,3,4)
-#print(b)
+y = [1,7,8,9]
 
-def generator(): 
+for each in y:
+    print(each)
+
+def gree():
+    print("hi how are you")
+
+l = gree()
+
+print(type(l))
+
+
+def gene(): 
     t = 1
     print ('First result is ',t) 
     yield t 
  
-    t += 1
+    t += 100
     print ('Second result is ',t) 
     yield t 
  
-    t += 1
+    t += 100
     print('Third result is ',t) 
     yield t 
 
-x = generator()
+x = gene()
+
+print(type(x))
 
 
 for each in x:
-    print("loop starts:",each)
-    next(x)
-    print("loop ends:",each)
+    pass
+
+a = (x*x for x in range(10))
+
+print(type(a))
+
+b = []
+
+for each in a:
+    b.append(each)
+
+print(b)
+
+c = (0,)
+
+
+print(type(c))
+
+#unpacking 
+latitudes = (0.34344,0.98564)
+passports = [("USA","987487"),("INDIA","098736"),("CHINA","9093843")]
+
+for country in sorted(passports):
+    print(type(country))
+    print("%s/%s" % country)
+
+print(passports)
+passports.sort()
+print(passports)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
