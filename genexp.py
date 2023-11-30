@@ -43,6 +43,8 @@ for each in x:
     next(x)
     print("loop ends:",each)
 
+print("I am adding a new line at the end")
+
 
 
 
